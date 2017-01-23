@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="fictional-broccoli">
+<head>
+    <title>fictional-broccoli</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        document.write('<base href="' + document.location + '" />');
+    </script>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="vendor/angular-material/angular-material.css"/>
+    <!-- endbower -->
+    <link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <md-toolbar layout="row" ng-controller="NavbarCtrl">
+        <h3>fictional-broccoli</h3>
+        <span flex></span>
+        <md-button ng-if="!authObj.$getAuth().uid" ng-click="login('google')">
+            Login
+        </md-button>
+        <md-button ng-if="authObj.$getAuth().uid" ng-click="authObj.$signOut()">
+            {{authObj.$getAuth().displayName}}
+        </md-button>
+    </md-toolbar>
+    <div flex layout="row">
+        <md-content flex id="content" ui-view></md-content>
+    </div>
+    <!-- bower:js -->
+    <!-- endbower -->
+    <script src="js/app.js"></script>
+</body>
+</html>
