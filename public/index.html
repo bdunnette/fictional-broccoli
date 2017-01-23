@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html ng-app="fictional-broccoli">
+<html ng-app="gopher-bills">
 <head>
-    <title>fictional-broccoli</title>
+    <title>gopher-bills</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
         document.write('<base href="' + document.location + '" />');
     </script>
     <!-- bower:css -->
-    <link rel="stylesheet" href="vendor/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="vendor/angular-material/angular-material.css" />
     <!-- endbower -->
     <link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
@@ -16,7 +16,7 @@
 
 <body>
     <md-toolbar layout="row" ng-controller="NavbarCtrl">
-        <h3>fictional-broccoli</h3>
+        <h3>gopher-bills</h3>
         <span flex></span>
         <md-button ng-if="!authObj.$getAuth().uid" ng-click="login('google')">
             Login
@@ -29,6 +29,15 @@
         <md-content flex id="content" ui-view></md-content>
     </div>
     <!-- bower:js -->
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="vendor/angular-animate/angular-animate.js"></script>
+    <script src="vendor/angular-aria/angular-aria.js"></script>
+    <script src="vendor/angular-messages/angular-messages.js"></script>
+    <script src="vendor/angular-material/angular-material.js"></script>
+    <script src="vendor/angular-sanitize/angular-sanitize.js"></script>
+    <script src="vendor/firebase/firebase.js"></script>
+    <script src="vendor/angularfire/dist/angularfire.js"></script>
     <!-- endbower -->
     <script src="js/app.js"></script>
 </body>

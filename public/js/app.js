@@ -3,12 +3,16 @@ function logMilestone(message) {
 }
 
 var config = {
-    // Insert your Firebase config here
+    apiKey: "AIzaSyC29nkD0DOlVr9kNxV7T2gc7cG3cBzWpfM",
+    authDomain: "gopher-bills.firebaseapp.com",
+    databaseURL: "https://gopher-bills.firebaseio.com",
+    storageBucket: "gopher-bills.appspot.com",
+    messagingSenderId: "749304793144"
 };
 
 firebase.initializeApp(config);
 
-var app = angular.module('fictional-broccoli', [
+var app = angular.module('gopher-bills', [
     'ui.router',
     'ngMaterial',
     'firebase'
